@@ -3,7 +3,7 @@
 #include<vector>
 using namespace std;
 struct Sales_data;
-istream& read(istream& is, Sales_data& item);
+istream& read(istream& is, Sales_data& item);//必须提前声明Sales_data
 struct Sales_data {
 	Sales_data() = default;
 	Sales_data(const string& s) : bookNo(s) {}
