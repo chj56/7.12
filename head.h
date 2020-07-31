@@ -1,9 +1,9 @@
-#pragma once
+ï»¿#pragma once
 #include<string>
 #include<vector>
 using namespace std;
 struct Sales_data;//6666666
-istream& read(istream& is, Sales_data& item);//±ØĞëÌáÇ°ÉùÃ÷Sales_data
+istream& read(istream& is, Sales_data& item);//å¿…é¡»æå‰å£°æ˜Sales_data
 class Sales_data {
 	friend istream& read(istream& is, Sales_data& item);
 	friend ostream& print(ostream& os, const Sales_data& item);
