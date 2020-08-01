@@ -7,21 +7,14 @@ using namespace std;
 int main()
 {
 
-	Sales_data item1;
-
-	print(std::cout, item1) << std::endl;
-
-	Sales_data item2("0-201-78345-X");
-
-	print(std::cout, item2) << std::endl;
-
-	Sales_data item3("0-201-78345-X", 3, 20.00);
-
-	print(std::cout, item3) << std::endl;
-
-	Sales_data item4(std::cin);
-
-	print(std::cout, item4) << std::endl;
+    cout << "----------- 1. default: " << endl;
+    Sales_data s1();
+    cout << "----------- 2. init bookNo" << endl;
+    Sales_data s2("999");
+    cout << "----------- 3.use cin init" << endl;
+    Sales_data s3(cin);
+    cout << "----------- 4. use three parameter init: " << endl;
+    Sales_data s4("s01-999", 2, 59.8);
 
 	
 

@@ -8,10 +8,14 @@ class Sales_data {
 	friend istream& read(istream& is, Sales_data& item);
 	friend ostream& print(ostream& os, const Sales_data& item);
 public:
-	Sales_data() = default;
-	Sales_data(const string& s) : bookNo(s) {}
+	//Sales_data() = default;
+	//Sales_data(const string& s) : bookNo(s) {}
+	//Sales_data(const string& s, unsigned n, double p) :bookNo(s), units_sold(n), revenue(p* n) {}
+	//Sales_data(istream& is) { read(is, *this); };
 	Sales_data(const string& s, unsigned n, double p) :bookNo(s), units_sold(n), revenue(p* n) {}
-	Sales_data(istream& is) { read(is, *this); };
+	Sales_data():Sales_data("",0,0){}
+	Sales_data(string s):Sales_data(s,0,0){}
+	Sales_data(istream& is) :Sales_data() { read(is, *this); }
 	string isbn() const { return bookNo; }
 	Sales_data& combine(const Sales_data&);
 private:
